@@ -27,13 +27,14 @@
     "@nestjs/swagger": "^8.1.0",
     "@nestjs/typeorm": "^10.0.2",
     "argon2": "^0.41.1",
+    "class-transformer": "^0.5.1",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.7",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
-    "swagger": "^0.7.5",
-    "swagger-ui-express": "^5.0.1",
-    "typeorm": "^0.3.20"
+    "ts-pattern": "^5.6.0",
+    "typeorm": "^0.3.20",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",

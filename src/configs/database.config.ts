@@ -23,7 +23,7 @@ export const DatabaseTestConfig: TypeOrmModuleOptions = {
     synchronize: true,
 }
 
-export enum Tablename {
+export enum TableName {
     User = "User",
     Node = "Node",
     Group = "Group",
