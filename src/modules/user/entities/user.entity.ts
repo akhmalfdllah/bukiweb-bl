@@ -16,7 +16,7 @@ import { Profile } from "src/modules/profile/entities/profile.entity";
 @Entity({ name: TableName.User })
 export class User {
     @PrimaryGeneratedColumn("uuid")
-    id: number
+    id: string
 
     @Column({ unique: true })
     username: string

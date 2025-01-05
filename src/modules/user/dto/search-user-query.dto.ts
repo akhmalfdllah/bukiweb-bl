@@ -4,12 +4,12 @@ import { Find } from "src/shared/utils/common.dto";
 import { ApiProperty, OmitType } from "@nestjs/swagger";
 import { Group } from "src/modules/group/entities/group.entity";
 
-export const searchUserQuery = z.object({
+export const searchUserQuerySchema = z.object({
     role: z.nativeEnum(UserRole, { message: "invalid role" }).optional(),
     group: z.string().optional().transform(Find.transFomId),
 });
 
-type SearchUserQuerySchema = z.infer<typeof searchUserQuery>;
+type SearchUserQuerySchema = z.infer<typeof searchUserQuerySchema>;
 export class SearchUserQueryDto implements Omit<SearchUserQuerySchema, "node" | "group"> {
     @ApiProperty({ required: false, enum: UserRole })
     role: UserRole
