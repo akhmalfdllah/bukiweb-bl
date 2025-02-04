@@ -1,5 +1,5 @@
-import { ApiProperty } from "@nestjs/swagger";
 import z from "zod";
+import { ApiProperty } from "@nestjs/swagger";
 
 export const verifyUserBodySchema = z.object({
     username: z.string().trim().min(1, "username can't be empty"),

@@ -2,7 +2,7 @@ import { match, P } from "ts-pattern";
 import { IsNull, Not } from "typeorm";
 import { BooleanStatus } from "src/configs/database.config";
 
-export const transFomId = (id?: string) => {
+export const transfomId = (id?: string) => {
     return match(id)
         .with(P.union("null"), () => IsNull)
         .with(P.string, (value) => ({ id: value }))

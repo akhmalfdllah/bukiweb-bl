@@ -4,7 +4,7 @@ import { JwtRefreshCookieName, JwtRefreshCookieOptions } from "src/configs/cooki
 
 @Injectable()
 export class CookieService {
-    getCookieRefreshToke(req: Request) {
+    getCookieRefreshToken(req: Request) {
         return req.cookies[JwtRefreshCookieName];
     }
 

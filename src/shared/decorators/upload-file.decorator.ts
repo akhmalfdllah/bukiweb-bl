@@ -1,6 +1,7 @@
-import { SetMetadata } from "@nestjs/common";
-import type { JwtRole } from "src/types/jwt.type";
-import { JwtRoleKey } from "src/configs/jwt.config";
+import { applyDecorators, UseInterceptors, UseGuards } from "@nestjs/common";
+import { FileInterceptor } from "@nestjs/platform-express";
+import { JwtAccessGuard } from "src/shared/guards/jwt-access.guard";
 
-export const Roles = (...roles: JwtRole[]) => SetMetadata(JwtRoleKey, roles);
-export type { JwtRole };
+export function UploadFile() {
+    return applyDecorators(UseGuards(JwtAccessGuard), UseInterceptors(FileInterceptor("file")));
+}
