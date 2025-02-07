@@ -1,4 +1,4 @@
-import { EnvPath } from "src/configs/constant.config";
+import { EnvPath } from "src/configs/constant";
 import * as dotenv from "dotenv";
 dotenv.config({ path: EnvPath });
 import { NestFactory } from "@nestjs/core";
@@ -7,7 +7,7 @@ import { AppModule } from "src/app.module";
 import { configSwagger } from "src/configs/swagger.config";
 import { corsOptions } from "src/configs/cors.config";
 import { APP_PORT } from "src/configs/env.config";
-import { Mode } from "src/configs/constant.config";
+import { Mode } from "src/configs/constant";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);

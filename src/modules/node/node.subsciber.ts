@@ -1,6 +1,6 @@
 import { EntitySubscriberInterface, EventSubscriber, UpdateEvent } from "typeorm";
 import { Node } from "./entities/node.entity";
-import { isNotMatch, Inherit } from "src/shared/utils/common.utils";
+import { isNotMatch, Inherit } from "src/shared/utils/common.util";
 
 @EventSubscriber()
 export class NodeSubscriber implements EntitySubscriberInterface<Node> {

@@ -10,7 +10,7 @@ import { CreateNodeBodyDto } from "./dto/create-node-body.dto";
 import { plainToInstance } from "class-transformer";
 import { NodePayloadDto } from "./dto/node-payload.dto";
 import { CreateItemNodeBodyTransformed } from "./dto/create-item-node-body-dto";
-import { Inherit, isNotEqual } from "src/shared/utils/common.utils";
+import { Inherit, isNotEqual } from "src/shared/utils/common.util";
 import { SearchNodeQueryTransformed } from "src/modules/node/dto/search-node-query.dto";
 import { UpdateNodeBodyTransformed } from "./dto/update-node-body.dto";
 import { InitNodeBodyDto } from "./dto/init-node-body.dto";

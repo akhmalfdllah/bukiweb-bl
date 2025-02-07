@@ -1,6 +1,6 @@
 import z from "zod";
 import { ApiProperty, OmitType } from "@nestjs/swagger";
-import { Prop } from "src/shared/utils/common.utils";
+import { Prop } from "src/shared/utils/common.util";
 import { Node } from "src/modules/node/entities/node.entity"
 export const createItemNodeBodySchema = z.object({
     name: z.string().trim().min(1, { message: "name can't be empty" }),

@@ -1,12 +1,12 @@
 import z from "zod";
 import { UserRole } from "src/configs/database.config";
-import { Find } from "src/shared/utils/common.dto";
+import { Find } from "src/shared/utils/common.util";
 import { ApiProperty, OmitType } from "@nestjs/swagger";
 import { Group } from "src/modules/group/entities/group.entity";
 
 export const searchUserQuerySchema = z.object({
     role: z.nativeEnum(UserRole, { message: "invalid role" }).optional(),
-    group: z.string().optional().transform(Find.transFomId),
+    group: z.string().optional().transform(Find.transfomId),
 });
 
 type SearchUserQuerySchema = z.infer<typeof searchUserQuerySchema>;

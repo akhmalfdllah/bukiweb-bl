@@ -1,7 +1,7 @@
 import { TestingModule } from "@nestjs/testing";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { DataSource } from "typeorm";
-import { EnvPath } from "src/configs/constant.config";
+import { EnvPath } from "src/configs/constant";
 import * as dotenv from "dotenv";
 dotenv.config({ path: EnvPath });
 import { DatabaseTestConfig } from "src/configs/database.config";

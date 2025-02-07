@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Req ,Res, HttpStatus, Get } from "@nestjs/common";
+import { Controller, Post, Body, Req ,Res, HttpStatus, Get, Delete } from "@nestjs/common";
 import { Request, Response } from "express";
 import { AuthService } from "./auth.service";
 import { CookieService } from "src/shared/services/cookie.service";
@@ -52,7 +52,7 @@ export class AuthController {
     }
 
     @ApiBearerAuth()
-    @Get("delete")
+    @Delete("delete")
     @TokenGuard()
     async delete (@Res() res: Response, @User() user: DecodedUser) {
         const payload = await this.authService.delete(user.id);

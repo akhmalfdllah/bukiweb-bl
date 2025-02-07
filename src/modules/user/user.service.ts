@@ -7,8 +7,8 @@ import { UserRepository } from "./user.repository";
 import { CreateUserBodyDto } from "./dto/create-user-body.dto";
 import { plainToInstance } from "class-transformer";
 import { UserPayloadDto } from "./dto/user-payload.dto";
-import { SearchUserQueryDto, SearchUserQueryTransformed } from "./dto/search-user-query.dto";
-import { UpdateUserBodyDto, UpdateUserBodyTransformed } from "./dto/update-user-body.dto";
+import { SearchUserQueryTransformed } from "./dto/search-user-query.dto";
+import { UpdateUserBodyTransformed } from "./dto/update-user-body.dto";
 import { VerifyUserBodyDto } from "./dto/verify-user-body.dto";
 import { ChangePasswordBodyDto } from "./dto/change-password-body.dto";
 
@@ -16,9 +16,9 @@ import { ChangePasswordBodyDto } from "./dto/change-password-body.dto";
 export class UserService {
     constructor(
         @InjectRepository(Group)
+        private groupRepository: Repository<Group>,
         private userRepository: UserRepository,
         private argonService: ArgonService,
-        private groupRepository: Repository<Group>
     ) { }
 
     async create({ username, confirmPassword, ...bodyDto }: CreateUserBodyDto) {
@@ -51,7 +51,7 @@ export class UserService {
                 relations: { nodes: true, group: true },
             })
             .catch(() => {
-                throw new NotFoundException("user not found");
+                throw new NotFoundException("user not found!");
             })
         return plainToInstance(UserPayloadDto, user);
     }

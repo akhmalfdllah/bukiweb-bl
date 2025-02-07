@@ -1,6 +1,6 @@
 import { TypeOrmModuleOptions } from "@nestjs/typeorm";
 import { DB_DATABASE_NAME, DB_HOST, DB_PASSWORD, DB_PORT, DB_TYPE, DB_USERNAME } from "./env.config";
-import { isProduction } from "./constant.config";
+import { isProduction } from "./constant";
 
 export const DatabaseConfig: TypeOrmModuleOptions = {
     type: DB_TYPE as "mssql",

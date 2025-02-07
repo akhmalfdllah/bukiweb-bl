@@ -1,6 +1,6 @@
 import z, { boolean } from "zod";
 import { BooleanStatus, NodeStatus } from "src/configs/database.config";
-import { Find } from "src/shared/utils/common.utils";
+import { Find } from "src/shared/utils/common.util";
 import { ApiProperty, OmitType  } from "@nestjs/swagger";
 import { User } from "src/modules/user/entities/user.entity";
 import { Node } from "src/modules/node/entities/node.entity";

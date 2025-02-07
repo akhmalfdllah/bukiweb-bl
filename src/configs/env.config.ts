@@ -1,4 +1,4 @@
-export const APP_PORT = Number(process.env.APP_PORT || 5000);
+export const APP_PORT = Number(process.env.APP_PORT || 3000);
 
 // Database env
 export const DB_TYPE = process.env.DB_TYPE || "mssql";

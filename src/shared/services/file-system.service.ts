@@ -3,7 +3,7 @@ import * as fs from "fs";
 import * as tar from "tar";
 import { Injectable, InternalServerErrorException } from "@nestjs/common";
 import { NODE_UPLOAD_DIR } from "src/configs/env.config";
-import { RootDir } from "src/configs/constant.config";
+import { RootDir } from "src/configs/constant";
 
 @Injectable()
 export class FileSystemService {

@@ -4,7 +4,7 @@ import z from "zod"
 export const createProdfileBodySchema = z.object({
     firstname: z.string(),
     lastname: z.string(),
-    email: z.string() 
+    email: z.string(), 
 });
 
 type CreateProdfileBodySchema = z.infer<typeof createProdfileBodySchema>

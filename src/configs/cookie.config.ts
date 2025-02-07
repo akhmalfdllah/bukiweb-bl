@@ -1,6 +1,6 @@
 import { CookieOptions } from "express";
 import { JWT_REFRESH_COOKIE_NAME } from "./env.config";
-import { isProduction } from "./constant.config";
+import { isProduction } from "./constant";
 
 const getMaxAgeInDay = (day: number) => {
     return day * 24 * 60 * 60 * 1000;

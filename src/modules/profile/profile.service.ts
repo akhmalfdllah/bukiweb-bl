@@ -22,8 +22,10 @@ export class ProfileService {
   }
 
   findOne(id: string) {
-    return this.profileRepository.findOne({
+    return this.profileRepository.findOneOrFail({
       where: { id }
+    }). catch(() => {
+      throw new NotFoundException("profile not found!")
     })
   }
 

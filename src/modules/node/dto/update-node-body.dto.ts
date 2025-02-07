@@ -1,5 +1,5 @@
 import z from "zod";
-import { Prop } from "src/shared/utils/common.utils";
+import { Prop } from "src/shared/utils/common.util";
 import { NodeStatus } from "src/configs/database.config";
 import { ApiProperty, OmitType } from "@nestjs/swagger";
 import { User } from "src/modules/user/entities/user.entity";
